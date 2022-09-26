@@ -8,6 +8,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
         android:background="@color/logo_color">
@@ -22,6 +23,7 @@
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"/>
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Title"
@@ -34,9 +36,9 @@
             app:layout_constraintStart_toEndOf="@id/menu_btn"/>
         <ImageView
             android:id="@+id/smsbtn"
-            android:layout_width="@dimen/_30sdp"
+            android:layout_width="@dimen/_40sdp"
             android:layout_height="wrap_content"
-            android:src="@drawable/sms_alert_icon"
+            android:src="@drawable/alert_icon"
             android:layout_marginEnd="@dimen/_15sdp"
             android:backgroundTint="@color/white"
            android:foregroundTint="@color/white"
