@@ -50,7 +50,11 @@ dependencies {
     // screen dencity
     implementation 'com.intuit.sdp:sdp-android:1.1.0'
 
+
     // Networking
     def retrofit_v = "2.9.0"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_v"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_v"
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
 }
