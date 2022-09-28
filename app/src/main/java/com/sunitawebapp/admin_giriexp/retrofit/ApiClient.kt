@@ -1,5 +1,6 @@
 package com.sunitawebapp.admin_giriexp.retrofit
 
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.sunitawebapp.admin_giriexp.utils.ApiLinks
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -9,13 +10,13 @@ import java.util.concurrent.TimeUnit
 
 object ApiClient {
     private val client = OkHttpClient.Builder()
-      //  .addNetworkInterceptor(StethoInterceptor())
+        .addNetworkInterceptor(StethoInterceptor())
         .connectTimeout(100, TimeUnit.SECONDS)
         .readTimeout(100, TimeUnit.SECONDS)
         .build()
 
     private var retrofit = Retrofit.Builder()
-      //  .baseUrl(ApiLinks.BASE_URL)
+        .baseUrl(ApiLinks.ROOT_URL)
         .addConverterFactory(ScalarsConverterFactory.create())
         .addConverterFactory(GsonConverterFactory.create())
         .client(client)

@@ -32,4 +32,9 @@
         android:name="com.sunitawebapp.admin_giriexp.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/versionAvailableFragment"
+        android:name="com.sunitawebapp.admin_giriexp.VersionAvailableFragment"
+        android:label="fragment_version_available"
+        tools:layout="@layout/fragment_version_available" />
 </navigation>
