@@ -3,9 +3,8 @@ package com.sunitawebapp.admin_giriexp.viewmodels
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
-import com.sunitawebapp.admin_giriexp.retrofit.Models.Request.LoginReq
-import com.sunitawebapp.admin_giriexp.retrofit.Models.Response.LoginRes
+import com.sunitawebapp.admin_giriexp.retrofit.models.Request.LoginReq
+import com.sunitawebapp.admin_giriexp.retrofit.models.Response.LoginRes
 import com.sunitawebapp.admin_giriexp.retrofit.Resource
 import com.sunitawebapp.admin_giriexp.retrofit.repository.Repository
 import kotlinx.coroutines.GlobalScope

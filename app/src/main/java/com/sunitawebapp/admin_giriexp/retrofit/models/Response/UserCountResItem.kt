@@ -1,4 +1,4 @@
-package com.sunitawebapp.admin_giriexp.retrofit.Models.Response
+package com.sunitawebapp.admin_giriexp.retrofit.models.Response
 
 data class UserCountResItem(
     val typename: String,

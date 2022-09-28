@@ -1,7 +1,6 @@
 package com.sunitawebapp.admin_giriexp.ui.fragments
 
 import android.os.Bundle
-import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,15 +8,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.sunitawebapp.admin_giriexp.BuildConfig
 import com.sunitawebapp.admin_giriexp.R
 import com.sunitawebapp.admin_giriexp.databinding.FragmentLoginBinding
-import com.sunitawebapp.admin_giriexp.databinding.FragmentSplashBinding
-import com.sunitawebapp.admin_giriexp.retrofit.Models.Request.LoginReq
-import com.sunitawebapp.admin_giriexp.retrofit.Models.Response.LoginRes
+import com.sunitawebapp.admin_giriexp.retrofit.models.Request.LoginReq
 import com.sunitawebapp.admin_giriexp.retrofit.Resource
 import com.sunitawebapp.admin_giriexp.utils.MyDialog
-import com.sunitawebapp.admin_giriexp.viewmodels.AppVersionAvailableViewmodel
 import com.sunitawebapp.admin_giriexp.viewmodels.LoginViewModel
 
 class LoginFragment : Fragment() ,View.OnClickListener{

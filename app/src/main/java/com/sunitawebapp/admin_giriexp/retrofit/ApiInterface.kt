@@ -1,9 +1,10 @@
 package com.sunitawebapp.admin_giriexp.retrofit
 
-import com.sunitawebapp.admin_giriexp.retrofit.Models.Request.LoginReq
-import com.sunitawebapp.admin_giriexp.retrofit.Models.Response.AppVersionAvailRes
-import com.sunitawebapp.admin_giriexp.retrofit.Models.Response.LoginRes
-import com.sunitawebapp.admin_giriexp.retrofit.Models.Response.UserCountResItem
+import com.sunitawebapp.admin_giriexp.retrofit.models.Request.LoginReq
+import com.sunitawebapp.admin_giriexp.retrofit.models.Response.AppVersionAvailRes
+import com.sunitawebapp.admin_giriexp.retrofit.models.Response.LoginRes
+import com.sunitawebapp.admin_giriexp.retrofit.models.Response.UserCountRes
+
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -18,5 +19,5 @@ interface ApiInterface {
     suspend fun isuserLogin(@Body loginReq : LoginReq) : Response<LoginRes>
 
     @GET("getUserCount")
-    suspend fun getUserCount() : Response<UserCountResItem>
+    suspend fun getUserCount() : Response<UserCountRes>
 }
