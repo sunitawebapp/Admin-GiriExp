@@ -9,10 +9,12 @@
       android:layout_height="match_parent">
 
       <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rvapproveList"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           app:layout_constraintTop_toTopOf="parent"
-          tools:listitem="@layout/item_approval_list"/>
+          tools:listitem="@layout/item_approval_list"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

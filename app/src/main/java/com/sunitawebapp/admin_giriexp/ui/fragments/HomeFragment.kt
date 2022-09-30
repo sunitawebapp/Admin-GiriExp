@@ -4,16 +4,19 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.OnClickListener
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.sunitawebapp.admin_giriexp.R
 import com.sunitawebapp.admin_giriexp.databinding.FragmentHomeBinding
-import com.sunitawebapp.admin_giriexp.retrofit.models.Response.UserCountResItem
+import com.sunitawebapp.admin_giriexp.retrofit.models.response.UserCountResItem
 import com.sunitawebapp.admin_giriexp.retrofit.Resource
 import com.sunitawebapp.admin_giriexp.utils.MyDialog
 import com.sunitawebapp.admin_giriexp.viewmodels.TotalUserCountViewModel
 
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment() ,OnClickListener{
      lateinit var binding : FragmentHomeBinding
      val totalUserCountViewModel : TotalUserCountViewModel by viewModels()
 
@@ -28,6 +31,9 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater,container, false)
+        binding.apply {
+            btnVerifyRegister.setOnClickListener(this@HomeFragment)
+        }
         // Inflate the layout for this fragment
         return binding.root
     }
@@ -58,5 +64,13 @@ class HomeFragment : Fragment() {
             }
         }
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    override fun onClick(view: View?) {
+        when(view){
+          binding. btnVerifyRegister->{
+           findNavController().navigate(R.id.approvalListFragment)
+          }
+        }
     }
 }

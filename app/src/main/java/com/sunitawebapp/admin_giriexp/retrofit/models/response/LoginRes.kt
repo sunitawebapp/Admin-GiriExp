@@ -1,4 +1,4 @@
-package com.sunitawebapp.admin_giriexp.retrofit.models.Response
+package com.sunitawebapp.admin_giriexp.retrofit.models.response
 
 data class LoginRes(
     val email: String,

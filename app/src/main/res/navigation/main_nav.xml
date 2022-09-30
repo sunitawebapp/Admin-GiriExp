@@ -31,10 +31,46 @@
         android:id="@+id/homeFragment"
         android:name="com.sunitawebapp.admin_giriexp.ui.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_approvalListFragment"
+            app:destination="@id/approvalListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/versionAvailableFragment"
         android:name="com.sunitawebapp.admin_giriexp.VersionAvailableFragment"
         android:label="fragment_version_available"
         tools:layout="@layout/fragment_version_available" />
+    <fragment
+        android:id="@+id/approvalListFragment"
+        android:name="com.sunitawebapp.admin_giriexp.ui.fragments.ApprovalListFragment"
+        android:label="fragment_approval_list"
+        tools:layout="@layout/fragment_approval_list" >
+        <action
+            android:id="@+id/action_approvalListFragment_to_verifyRegisterFragment"
+            app:destination="@id/verifyRegisterFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/verifyRegisterFragment"
+        android:name="com.sunitawebapp.admin_giriexp.ui.fragments.VerifyRegisterFragment"
+        android:label="fragment_verify_register"
+        tools:layout="@layout/fragment_verify_register" >
+        <argument
+            android:name="fullName"
+            app:argType="string"
+            android:defaultValue=""
+            />
+        <argument
+            android:name="mobile"
+            app:argType="string"
+            android:defaultValue=""
+            />
+        <argument
+            android:name="stationName"
+            app:argType="string"
+            android:defaultValue=""
+            />
+    </fragment>
 </navigation>

@@ -4,57 +4,85 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.OnClickListener
 import android.view.ViewGroup
 import com.sunitawebapp.admin_giriexp.R
+import com.sunitawebapp.admin_giriexp.databinding.FragmentVerifyRegisterBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [VerifyRegisterFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class VerifyRegisterFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class VerifyRegisterFragment : Fragment(), OnClickListener {
+   lateinit var binding : FragmentVerifyRegisterBinding
+   var clickApproveName =false
+    var clickApproveMob =false
+    var clickApproveStation =false
 
+    lateinit var verifyRegisterFragmentArgs : VerifyRegisterFragmentArgs
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding= FragmentVerifyRegisterBinding.inflate(inflater,container, false)
+        binding.apply {
+            imgNameApprove.setOnClickListener(this@VerifyRegisterFragment)
+            imgMobileApprove.setOnClickListener(this@VerifyRegisterFragment)
+            imgStationApprove.setOnClickListener(this@VerifyRegisterFragment)
+            btnApprove.setOnClickListener(this@VerifyRegisterFragment)
+            btnReject.setOnClickListener(this@VerifyRegisterFragment)
+        }
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_verify_register, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment VerifyRegisterFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            VerifyRegisterFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        super.onViewCreated(view, savedInstanceState)
+    }
+
+    override fun onClick(view: View?) {
+        when(view){
+            binding.imgNameApprove ->{
+                if (!clickApproveName) {
+                    clickApproveName=true
+                    binding.imgNameApprove.setBackgroundResource(R.drawable.tick_icon)
+                }else{
+                    clickApproveName=false
+                    binding.imgNameApprove.setBackgroundResource(R.drawable.untick_icon)
                 }
             }
+
+            binding.imgMobileApprove ->{
+                if (!clickApproveMob) {
+                    clickApproveMob=true
+                    binding.imgMobileApprove.setBackgroundResource(R.drawable.tick_icon)
+                }else{
+                    clickApproveMob=false
+                    binding.imgMobileApprove.setBackgroundResource(R.drawable.untick_icon)
+                }
+            }
+
+            binding.imgStationApprove ->{
+                if (!clickApproveStation) {
+                    clickApproveStation=true
+                    binding.imgStationApprove.setBackgroundResource(R.drawable.tick_icon)
+                }else{
+                    clickApproveStation=false
+                    binding.imgStationApprove.setBackgroundResource(R.drawable.untick_icon)
+                }
+            }
+
+            binding.btnApprove->{
+
+            }
+
+            binding.btnReject->{
+
+            }
+        }
     }
+
 }

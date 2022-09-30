@@ -2,7 +2,7 @@ package com.sunitawebapp.admin_giriexp.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.sunitawebapp.admin_giriexp.retrofit.models.Response.AppVersionAvailRes
+import com.sunitawebapp.admin_giriexp.retrofit.models.response.AppVersionAvailRes
 import com.sunitawebapp.admin_giriexp.retrofit.Resource
 import com.sunitawebapp.admin_giriexp.retrofit.repository.Repository
 import kotlinx.coroutines.GlobalScope

@@ -1,9 +1,10 @@
 package com.sunitawebapp.admin_giriexp.retrofit
 
 import com.sunitawebapp.admin_giriexp.retrofit.models.Request.LoginReq
-import com.sunitawebapp.admin_giriexp.retrofit.models.Response.AppVersionAvailRes
-import com.sunitawebapp.admin_giriexp.retrofit.models.Response.LoginRes
-import com.sunitawebapp.admin_giriexp.retrofit.models.Response.UserCountRes
+import com.sunitawebapp.admin_giriexp.retrofit.models.response.AppVersionAvailRes
+import com.sunitawebapp.admin_giriexp.retrofit.models.response.ApproveListRes
+import com.sunitawebapp.admin_giriexp.retrofit.models.response.LoginRes
+import com.sunitawebapp.admin_giriexp.retrofit.models.response.UserCountRes
 
 import retrofit2.Response
 import retrofit2.http.Body
@@ -20,4 +21,10 @@ interface ApiInterface {
 
     @GET("getUserCount")
     suspend fun getUserCount() : Response<UserCountRes>
+
+    @GET("getApprovalList")
+    suspend fun getApprovalList(@Query("tblsysuserlogin_id") tblsysuserlogin_id : Int,
+                                @Query("tblmastusertype_id") tblmastusertype_id : Int)
+
+    : Response<ApproveListRes>
 }

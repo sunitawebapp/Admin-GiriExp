@@ -44,7 +44,7 @@
           android:paddingBottom="@dimen/_5sdp"
           />
       <ImageButton
-          android:id="@+id/imgPaymentSetarrow"
+          android:id="@+id/imgNameApprove"
           android:layout_width="@dimen/_30sdp"
           android:layout_height="@dimen/_30sdp"
           android:gravity="center"
@@ -93,7 +93,7 @@
           android:paddingBottom="@dimen/_5sdp"
           />
       <ImageButton
-          android:id="@+id/imgPaymentSet"
+          android:id="@+id/imgMobileApprove"
           android:layout_width="@dimen/_30sdp"
           android:layout_height="@dimen/_30sdp"
           android:gravity="center"
@@ -142,7 +142,7 @@
           android:paddingBottom="@dimen/_5sdp"
           />
       <ImageButton
-          android:id="@+id/imgPayment"
+          android:id="@+id/imgStationApprove"
           android:layout_width="@dimen/_30sdp"
           android:layout_height="@dimen/_30sdp"
           android:gravity="center"

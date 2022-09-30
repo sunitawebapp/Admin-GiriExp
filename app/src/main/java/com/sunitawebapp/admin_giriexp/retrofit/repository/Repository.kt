@@ -15,4 +15,6 @@ object Repository {
 
     suspend fun UserCount() =
         ApiClient.createService(ApiInterface::class.java).getUserCount()
+    suspend fun ApprovalList(tblsysuserlogin_id : Int,tblmastusertype_id : Int) =
+        ApiClient.createService(ApiInterface::class.java).getApprovalList(tblsysuserlogin_id,tblmastusertype_id)
 }

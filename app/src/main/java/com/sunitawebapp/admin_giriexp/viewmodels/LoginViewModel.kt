@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.sunitawebapp.admin_giriexp.retrofit.models.Request.LoginReq
-import com.sunitawebapp.admin_giriexp.retrofit.models.Response.LoginRes
+import com.sunitawebapp.admin_giriexp.retrofit.models.response.LoginRes
 import com.sunitawebapp.admin_giriexp.retrofit.Resource
 import com.sunitawebapp.admin_giriexp.retrofit.repository.Repository
 import kotlinx.coroutines.GlobalScope
